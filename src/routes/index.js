@@ -3,6 +3,10 @@ const router = express.Router();
 
 router.get('/', function(req, res, next) {
     res.send('Bienvenidos a la pagina principal API!! ✋');
+    // res.json({
+    //     estado: true,
+    //     mensaje: 'funciona!'
+    // })
 });
 
 
