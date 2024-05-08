@@ -2,10 +2,10 @@ import express from "express";
 const router = express.Router();
 
 router.get('/', function(req, res, next) {
-    res.send('Bienvenidos a la pagina principal API!! ✋');
+    res.status(200).send('Bienvenidos a la pagina principal API!! ✋');
     // res.json({
-    //     estado: true,
-    //     mensaje: 'funciona!'
+    //     state: true,
+    //     message: 'funciona!'
     // })
 });
 
