@@ -20,4 +20,6 @@ va de la mano con el ppt - guia
 1. https://bluuweb.github.io/node/07-jwt/#jwt-2
 2. https://dvmhn07.medium.com/jwt-authentication-in-node-js-a-practical-guide-c8ab1b432a49
 3. https://blog.logrocket.com/node-js-project-architecture-best-practices/
+4. https://www.toptal.com/nodejs/secure-rest-api-in-nodejs
+
 proyecto :pr-node-jwt-mysql-angular mas avanzado
