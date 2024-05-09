@@ -4,6 +4,7 @@ dotenv.config()
 const secret  = process.env.TOKEN_SECRET;
 
 const verifyToken = (req, res, next) => {
+    // const token = req.header('auth-token')
     // let token = req.headers["x-access-token"];
     // Bearer "codeToken"
     if(!req.headers.authorization){

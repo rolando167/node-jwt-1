@@ -1,28 +1,17 @@
-import jwt from "jsonwebtoken";
-import dotenv from 'dotenv';
-dotenv.config()
 
-const secret  = process.env.TOKEN_SECRET;
+import authService  from "../Services/AuthService.js";
 
 const loginToken = async(req, res) => {
     try {
-        console.log(req.body);
-	    console.log(req.params);
-
-        //Al existir usuario en Base de datos ...
-        const { id : sub, name } = { id : "12340", name :"Luccario"}
-
-        const token = jwt.sign({
-            sub,
-            name,
-            exp: Date.now() + (2 * 60) * 1000
-        }, secret);
+        // console.log(req.body);
+	    // console.log(req.params);
+        const authenticated = authService.auth()
 
         res.status(200)
-        .header('auth-token', token)
+        .header('auth-token', authenticated.token)
         .json({
             state: true,
-            token,
+            token: authenticated.token,
             message: '✔️ Usuario Logeado'
         })
     } catch (error) {
