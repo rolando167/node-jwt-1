@@ -20,8 +20,6 @@ app.use(express.text());
 app.use(cors());
 app.use(morgan('dev'));
 
-// capturar Puerto
-const PORT  = process.env.APP_PORT || 4000;
 
 //Ruta
 app.use('/api/v1',  reviewRoutes);
@@ -29,6 +27,5 @@ app.use('/api/v1',  reviewRoutes);
 
 
 export {
-    app,
-    PORT
+    app
 };

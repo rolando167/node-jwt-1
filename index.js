@@ -1,4 +1,7 @@
-import {app, PORT} from "./src/app.js";
+import {app} from "./src/app.js";
+
+// capturar Puerto
+const PORT  = process.env.APP_PORT || 4000;
 
 //funcion Servidor
 async function servidor () {

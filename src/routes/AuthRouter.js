@@ -4,7 +4,7 @@ const routes = express.Router();
 /*=============================================================================
 |   Modulo:  Auth
 |   Fecha: 09-05-2024
-|   Ruta Test:  http://localhost:4000/api/v1/auth/
+|   Ruta Test:  http://localhost:3000/api/v1/auth/
  *===========================================================================*/
 
 routes.get('/', function(req, res, next) {
