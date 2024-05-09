@@ -1,7 +1,7 @@
 import express from "express";
 const router = express.Router();
 
-import authRouter from "./AuthRouter.js";
+import authRoute from "./AuthRoute.js";
 
 
 router.get('/', function(req, res, next) {
@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.use('/auth', authRouter);
+router.use('/auth', authRoute);
 // router.use('/users', require('./conversor'));
 
 
