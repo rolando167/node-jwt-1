@@ -1,5 +1,6 @@
 import express from "express";
 const routes = express.Router();
+import {loginToken, profile} from '../app/Controllers/AuthController.js';
 
 /*=============================================================================
 |   Modulo:  Auth
@@ -14,13 +15,7 @@ routes.get('/', function(req, res, next) {
     })
 });
 
-routes.post('/login' , function(req, res){
-    console.log(req.body);
-	console.log(req.params);
-    res.status(200).json({
-        state: true,
-        message: '✔️ Usuario Logeado'
-    })
-});
+routes.post('/login', loginToken)
+        .get('/profile', profile);
 
 export default routes;
