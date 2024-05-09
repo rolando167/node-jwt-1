@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken";
 import dotenv from 'dotenv';
 dotenv.config()
 
-const secret  = process.env.TOKEN_SECRET;
+const TOKEN_SECRET  = process.env.TOKEN_SECRET;
 
 const auth = () => {
      //Al existir usuario en Base de datos ...
@@ -12,7 +12,7 @@ const auth = () => {
          sub,
          name,
          exp: Date.now() + (2 * 60) * 1000
-     }, secret);
+     }, TOKEN_SECRET);
     return {token};
 }
 
