@@ -18,7 +18,9 @@ const loginToken = async(req, res) => {
             exp: Date.now() + 120 * 1000
         }, secret);
 
-        res.status(200).json({
+        res.status(200)
+        .header('auth-token', token)
+        .json({
             state: true,
             token,
             message: '✔️ Usuario Logeado'
@@ -37,7 +39,7 @@ const profile = async(req, res) => {
         const payload = jwt.verify(token, secret);
 
         if(Date.now() > payload.exp){
-            return 
+            return res.status(401).json({error: "Token expired!!"});
         }
         res.status(200).json({
             state: true,
