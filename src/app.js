@@ -6,7 +6,7 @@ import cors from "cors";
 import dotenv from 'dotenv';
 dotenv.config()
 
-import reviewRoutes from "./routes/index.js";
+import reviewRoutes from "./routes/indexRoute.js";
 
 const app = express();
 
