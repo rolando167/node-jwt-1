@@ -1,7 +1,7 @@
 import express from "express";
 const routes = express.Router();
 import {loginToken, profile} from '../app/Controllers/AuthController.js';
-
+import {verifyToken} from '../app/Middlewares/AuthMiddleware.js';
 /*=============================================================================
 |   Modulo:  Auth
 |   Fecha: 09-05-2024
@@ -16,6 +16,6 @@ routes.get('/', function(req, res, next) {
 });
 
 routes.post('/login', loginToken)
-        .get('/profile', profile);
+        .get('/profile', [verifyToken], profile);
 
 export default routes;

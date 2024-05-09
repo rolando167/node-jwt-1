@@ -38,9 +38,6 @@ const profile = async(req, res) => {
         const token = req.headers.authorization.split(" ")[1];
         const payload = jwt.verify(token, secret);
 
-        if(Date.now() > payload.exp){
-            return res.status(401).json({error: "Token expired!!"});
-        }
         res.status(200).json({
             state: true,
             message: '✔️ User Profile!!'
