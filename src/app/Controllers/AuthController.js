@@ -33,11 +33,6 @@ const loginToken = async(req, res) => {
 
 const profile = async(req, res) => {
     try {
-        // Bearer "codeToken"
-
-        const token = req.headers.authorization.split(" ")[1];
-        const payload = jwt.verify(token, secret);
-
         res.status(200).json({
             state: true,
             message: '✔️ User Profile!!'
@@ -46,7 +41,6 @@ const profile = async(req, res) => {
         res.status(401).json({error: error.message});
     }
 }
-
 
 export {
     loginToken,
