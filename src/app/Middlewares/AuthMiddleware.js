@@ -21,7 +21,7 @@ const verifyToken = (req, res, next) => {
         if(Date.now() > decoded.exp){
             return res.status(401).json({error: "Token expired!!"});
         }
-        req.userId = decoded.id;
+        // req.userId = decoded.id;
         next();
     });
 
