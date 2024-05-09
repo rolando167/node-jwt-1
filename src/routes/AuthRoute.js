@@ -8,7 +8,7 @@ import {verifyToken} from '../app/Middlewares/AuthMiddleware.js';
 |   Ruta Test:  http://localhost:3000/api/v1/auth/
  *===========================================================================*/
 
-routes.get('/', function(req, res, next) {
+routes.get('/', function(req, res) {
     res.status(200).json({
         state: true,
         message: '✔️ Modulo Auth!!'

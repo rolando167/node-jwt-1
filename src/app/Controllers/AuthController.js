@@ -15,7 +15,7 @@ const loginToken = async(req, res) => {
         const token = jwt.sign({
             sub,
             name,
-            exp: Date.now() + 120 * 1000
+            exp: Date.now() + (2 * 60) * 1000
         }, secret);
 
         res.status(200)
