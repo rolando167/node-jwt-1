@@ -4,7 +4,7 @@ const routes = express.Router();
 import userController from "../app/Controllers/UserController.js";
 /*=============================================================================
 |   Modulo:  Users
-|   Fecha: 09-05-2024
+|   Fecha:   09-05-2024
 |   Ruta Test:  http://localhost:3000/api/v1/user/
  *===========================================================================*/
 
